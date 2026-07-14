@@ -1,0 +1,80 @@
+/* BaseNode.css
+   Structural / layout styles only.
+   Visual polish (colors, fonts, shadows, etc.) is deferred to Part 2. */
+
+/* ── Container ── */
+.base-node {
+  position: relative;
+  min-width: 200px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* ── Title bar ── */
+.base-node__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.base-node__icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.base-node__title {
+  white-space: nowrap;
+}
+
+/* ── Body ── */
+.base-node__body {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+/* ── Field rows ── */
+.base-node__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.base-node__field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: #555;
+}
+
+.base-node__field-control {
+  width: 100%;
+}
+
+.base-node__field-control input,
+.base-node__field-control select,
+.base-node__field-control textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.base-node__field-control textarea {
+  resize: vertical;
+  min-height: 40px;
+}
