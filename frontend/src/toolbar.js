@@ -6,8 +6,8 @@ import { nodeList } from './nodeRegistry';
 export const PipelineToolbar = () => {
 
     return (
-        <div style={{ padding: '10px' }}>
-            <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        <div className="pipeline-toolbar">
+            <div className="pipeline-toolbar__nodes">
                 {nodeList.map((node) => (
                     <DraggableNode
                         key={node.type}

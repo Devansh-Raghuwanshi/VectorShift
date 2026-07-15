@@ -27,6 +27,7 @@ export const ApiCallNode = ({ id, data }) => {
       id={id}
       title="API Call"
       icon="🌐"
+      accent="var(--node-api)"
       inputs={[{ id: 'body' }]}
       outputs={[{ id: 'response' }]}
     >

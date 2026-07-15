@@ -13,7 +13,7 @@ export const NoteNode = ({ id, data }) => {
   );
 
   return (
-    <BaseNode id={id} title="Note" icon="📝">
+    <BaseNode id={id} title="Note" icon="🗒️" accent="var(--node-note)">
       <NodeField label="Note">
         <textarea
           value={note}

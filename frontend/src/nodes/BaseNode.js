@@ -59,8 +59,6 @@ export const NodeField = ({ label, children }) => (
   </div>
 );
 
-// ─── BaseNode ──────────────────────────────────────────────────
-
 /**
  * Base wrapper component for every node in the pipeline editor.
  *
@@ -68,6 +66,8 @@ export const NodeField = ({ label, children }) => (
  *   id       - ReactFlow node id
  *   title    - Display name shown in the title bar
  *   icon     - Optional emoji / icon string
+ *   accent   - Optional CSS color for the left border accent
+ *   style    - Optional inline style overrides (e.g. dynamic width)
  *   inputs   - Array of input handle descriptors (left side)
  *   outputs  - Array of output handle descriptors (right side)
  *   children - Node-specific body content
@@ -76,12 +76,20 @@ export const BaseNode = ({
   id,
   title,
   icon,
+  accent,
+  style: styleProp,
   inputs = [],
   outputs = [],
   children,
 }) => {
+  const style = {
+    ...(accent ? { '--node-accent': accent } : {}),
+    ...styleProp,
+  };
+  const hasStyle = Object.keys(style).length > 0;
+
   return (
-    <div className="base-node">
+    <div className="base-node" style={hasStyle ? style : undefined}>
       {/* ── Title bar ── */}
       <div className="base-node__header">
         {icon && <span className="base-node__icon">{icon}</span>}

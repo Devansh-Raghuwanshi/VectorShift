@@ -18,6 +18,7 @@ export const MergeNode = ({ id, data }) => {
       id={id}
       title="Merge"
       icon="🔗"
+      accent="var(--node-merge)"
       inputs={[{ id: 'input_1' }, { id: 'input_2' }, { id: 'input_3' }]}
       outputs={[{ id: 'merged' }]}
     >

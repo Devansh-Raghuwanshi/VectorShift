@@ -16,7 +16,7 @@ export const InputNode = ({ id, data }) => {
   );
 
   return (
-    <BaseNode id={id} title="Input" outputs={[{ id: 'value' }]}>
+    <BaseNode id={id} title="Input" icon="📥" accent="var(--node-input)" outputs={[{ id: 'value' }]}>
       <NodeField label="Name">
         <input
           type="text"

@@ -17,6 +17,7 @@ export const MathNode = ({ id, data }) => {
       id={id}
       title="Math"
       icon="🔢"
+      accent="var(--node-math)"
       inputs={[{ id: 'a' }, { id: 'b' }]}
       outputs={[{ id: 'result' }]}
     >

@@ -18,6 +18,7 @@ export const ConditionalNode = ({ id, data }) => {
       id={id}
       title="Conditional"
       icon="🔀"
+      accent="var(--node-conditional)"
       inputs={[{ id: 'input' }]}
       outputs={[{ id: 'true' }, { id: 'false' }]}
     >
